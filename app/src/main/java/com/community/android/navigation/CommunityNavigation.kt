@@ -9,6 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.community.android.ui.components.BottomNavigationBar
 import com.community.android.ui.screens.HomeScreen
+import com.community.feature.restaurants.presentation.list.RestaurantsScreen
 
 /**
  * Main navigation component for the Community app
@@ -37,9 +38,7 @@ fun CommunityNavigation(
             
             // Restaurants Screen
             composable(Screen.Restaurants.route) {
-                // RestaurantsScreen(navController = navController)
-                // Placeholder for now
-                HomeScreen(navController = navController)
+                RestaurantsScreen(navController = navController)
             }
             
             // Cafes Screen

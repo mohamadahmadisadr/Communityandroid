@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
@@ -7,30 +7,21 @@ plugins {
 }
 
 android {
-    namespace 'com.community.android'
+    namespace 'com.community.feature.restaurants'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.community.android"
         minSdk 24
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary true
-        }
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            debuggable true
-            applicationIdSuffix ".debug"
         }
     }
 
@@ -52,42 +43,16 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion compose_version
     }
-
-    packagingOptions {
-        resources {
-            excludes += '/META-INF/{AL2.0,LGPL2.1}'
-        }
-    }
 }
 
 dependencies {
     // Core modules
     implementation project(':core:common')
     implementation project(':core:ui')
-    implementation project(':core:network')
-    implementation project(':core:database')
-
-    // Data modules
-    implementation project(':data:restaurants')
-
+    
     // Domain modules
     implementation project(':domain:restaurants')
-
-    // Feature modules
-    implementation project(':feature:restaurants')
-    // TODO: Add other feature modules as they are implemented
-    // implementation project(':feature:auth')
-    // implementation project(':feature:home')
-    // implementation project(':feature:cafes')
-    // implementation project(':feature:rentals')
-    // implementation project(':feature:jobs')
-    // implementation project(':feature:services')
-    // implementation project(':feature:events')
-    // implementation project(':feature:profile')
-    // implementation project(':feature:search')
-    // implementation project(':feature:favorites')
-    // implementation project(':feature:messaging')
-
+    
     // Android Core
     implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
@@ -97,25 +62,36 @@ dependencies {
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
     implementation 'androidx.compose.material3:material3:1.1.2'
-
+    implementation 'androidx.compose.material:material-icons-extended:1.5.8'
+    
     // Navigation
     implementation "androidx.navigation:navigation-compose:$navigation_version"
-    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
-
-    // Hilt Dependency Injection
+    
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_version"
+    
+    // Paging 3
+    implementation 'androidx.paging:paging-runtime-ktx:3.2.1'
+    implementation 'androidx.paging:paging-compose:3.2.1'
+    
+    // Dependency Injection
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
     implementation 'androidx.hilt:hilt-navigation-compose:1.1.0'
-
-    // Splash Screen
-    implementation 'androidx.core:core-splashscreen:1.0.1'
-
+    
+    // Image Loading
+    implementation 'io.coil-kt:coil-compose:2.5.0'
+    
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    
     // Logging
     implementation 'com.jakewharton.timber:timber:5.0.1'
-
+    
     // Testing
     testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
