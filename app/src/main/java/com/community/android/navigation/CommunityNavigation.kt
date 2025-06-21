@@ -10,6 +10,9 @@ import androidx.navigation.compose.composable
 import com.community.android.ui.components.BottomNavigationBar
 import com.community.android.ui.screens.HomeScreen
 import com.community.feature.restaurants.presentation.list.RestaurantsScreen
+import com.community.feature.search.presentation.SearchScreen
+import com.community.feature.profile.presentation.ProfileScreen
+import com.community.feature.auth.presentation.login.LoginScreen
 
 /**
  * Main navigation component for the Community app
@@ -76,11 +79,29 @@ fun CommunityNavigation(
                 HomeScreen(navController = navController)
             }
             
+            // Search Screen
+            composable(Screen.Search.route) {
+                SearchScreen(navController = navController)
+            }
+
             // Profile Screen
             composable(Screen.Profile.route) {
-                // ProfileScreen(navController = navController)
-                // Placeholder for now
-                HomeScreen(navController = navController)
+                ProfileScreen(
+                    navController = navController,
+                    onLoginRequired = {
+                        navController.navigate(Screen.Login.route)
+                    }
+                )
+            }
+
+            // Login Screen
+            composable(Screen.Login.route) {
+                LoginScreen(
+                    navController = navController,
+                    onLoginSuccess = {
+                        navController.popBackStack()
+                    }
+                )
             }
         }
     }

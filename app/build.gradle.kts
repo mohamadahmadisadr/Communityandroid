@@ -69,14 +69,18 @@ dependencies {
 
     // Data modules
     implementation project(':data:restaurants')
+    implementation project(':data:auth')
 
     // Domain modules
     implementation project(':domain:restaurants')
+    implementation project(':domain:auth')
 
     // Feature modules
     implementation project(':feature:restaurants')
+    implementation project(':feature:auth')
+    implementation project(':feature:search')
+    implementation project(':feature:profile')
     // TODO: Add other feature modules as they are implemented
-    // implementation project(':feature:auth')
     // implementation project(':feature:home')
     // implementation project(':feature:cafes')
     // implementation project(':feature:rentals')
