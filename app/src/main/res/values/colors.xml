@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#1976D2</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#D3E3FD</color>
+    <color name="on_primary_container">#001C38</color>
+    
+    <!-- Secondary Colors -->
+    <color name="secondary">#03DAC6</color>
+    <color name="on_secondary">#000000</color>
+    <color name="secondary_container">#B2DFDB</color>
+    <color name="on_secondary_container">#002020</color>
+    
+    <!-- Tertiary Colors -->
+    <color name="tertiary">#2196F3</color>
+    <color name="on_tertiary">#FFFFFF</color>
+    <color name="tertiary_container">#D1E4FF</color>
+    <color name="on_tertiary_container">#001D36</color>
+    
+    <!-- Error Colors -->
+    <color name="error">#B00020</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="error_container">#FFDAD6</color>
+    <color name="on_error_container">#410002</color>
+    
+    <!-- Background Colors -->
+    <color name="background">#FAFAFA</color>
+    <color name="on_background">#1C1C1E</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="on_surface">#1C1C1E</color>
+    <color name="surface_variant">#F5F5F5</color>
+    <color name="on_surface_variant">#757575</color>
+    
+    <!-- Outline Colors -->
+    <color name="outline">#E0E0E0</color>
+    <color name="outline_variant">#EEEEEE</color>
+    
+    <!-- Inverse Colors -->
+    <color name="surface_inverse">#1E1E1E</color>
+    <color name="on_surface_inverse">#E1E1E1</color>
+    <color name="primary_inverse">#90CAF9</color>
+    
+    <!-- Basic Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    
+    <!-- Category Colors -->
+    <color name="restaurant_color">#E91E63</color>
+    <color name="cafe_color">#795548</color>
+    <color name="rental_color">#9C27B0</color>
+    <color name="job_color">#607D8B</color>
+    <color name="service_color">#009688</color>
+    <color name="event_color">#FF5722</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="info">#2196F3</color>
+    
+    <!-- Gray Scale -->
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
+</resources>
