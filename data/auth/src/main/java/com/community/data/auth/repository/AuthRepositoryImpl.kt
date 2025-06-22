@@ -343,7 +343,7 @@ class AuthRepositoryImpl @Inject constructor(
         }
     }
 
-    private fun storeAuthData(tokens: AuthTokensDto, user: UserDto) {
+    private suspend fun storeAuthData(tokens: AuthTokensDto, user: UserDto) {
         sharedPreferences.edit()
             .putString(Constants.KEY_AUTH_TOKEN, tokens.accessToken)
             .putString(Constants.KEY_REFRESH_TOKEN, tokens.refreshToken)
@@ -353,13 +353,16 @@ class AuthRepositoryImpl @Inject constructor(
         
         // Cache user data
         try {
+            
             userDao.insertUser(user.toEntity())
         } catch (e: Exception) {
             Timber.e(e, "Error caching user data")
         }
     }
 
-    private fun clearAuthData() {
+
+
+    private suspend fun clearAuthData() {
         val userId = sharedPreferences.getString(Constants.KEY_USER_ID, null)
         
         sharedPreferences.edit()

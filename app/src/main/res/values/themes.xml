@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.CommunityAndroid" parent="Theme.Material3.DayNight">
-        <item name="colorPrimary">@color/primary</item>
+        <!-- <item name="colorPrimary">@color/primary</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorPrimaryContainer">@color/primary_container</item>
         <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
@@ -27,13 +27,13 @@
         <item name="colorOnSurfaceInverse">@color/on_surface_inverse</item>
         <item name="colorPrimaryInverse">@color/primary_inverse</item>
         <item name="android:colorBackground">@color/background</item>
-        <item name="colorOnBackground">@color/on_background</item>
+        <item name="colorOnBackground">@color/on_background</item> -->
     </style>
 
-    <style name="Theme.CommunityAndroid.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/primary</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
-        <item name="windowSplashScreenAnimationDuration">1000</item>
-        <item name="postSplashScreenTheme">@style/Theme.CommunityAndroid</item>
-    </style>
+    <!-- <style name="Theme.CommunityAndroid.Splash" parent="Theme.SplashScreen"> -->
+        <!-- <item name="windowSplashScreenBackground">@color/primary</item> -->
+        <!-- <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item> -->
+        <!-- <item name="windowSplashScreenAnimationDuration">1000</item> -->
+        <!-- <item name="postSplashScreenTheme">@style/Theme.CommunityAndroid</item> -->
+    <!-- </style> -->
 </resources>

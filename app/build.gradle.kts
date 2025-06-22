@@ -1,132 +1,109 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
-    id 'kotlin-parcelize'
-    id 'com.google.dagger.hilt.android'
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
+    alias(libs.plugins.hilt)
 }
 
 android {
-    namespace 'com.community.android'
-    compileSdk 34
+    namespace = "com.community.android"
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId "com.community.android"
-        minSdk 24
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        applicationId = "com.community.android"
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
+        versionCode = libs.versions.versionCode.get().toInt()
+        versionName = libs.versions.versionName.get()
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
-            useSupportLibrary true
+            useSupportLibrary = true
         }
     }
 
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            debuggable true
-            applicationIdSuffix ".debug"
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = "1.8"
     }
 
     buildFeatures {
-        compose true
-        dataBinding true
-        viewBinding true
+        compose = true
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion compose_version
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 
-    packagingOptions {
+    packaging {
         resources {
-            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
 }
 
 dependencies {
-    // Core modules
-    implementation project(':core:common')
-    implementation project(':core:ui')
-    implementation project(':core:network')
-    implementation project(':core:database')
+    // Compose BOM - this manages all compose versions
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.bundles.compose)
+    
+    // Feature modules
+    implementation(project(":feature:auth"))
+    implementation(project(":feature:restaurants"))
+    implementation(project(":feature:profile"))
+    implementation(project(":feature:search"))
 
     // Data modules
-    implementation project(':data:restaurants')
-    implementation project(':data:auth')
+    implementation(project(":data:auth"))
+    implementation(project(":data:restaurants"))
 
-    // Domain modules
-    implementation project(':domain:restaurants')
-    implementation project(':domain:auth')
-
-    // Feature modules
-    implementation project(':feature:restaurants')
-    implementation project(':feature:auth')
-    implementation project(':feature:search')
-    implementation project(':feature:profile')
-    // TODO: Add other feature modules as they are implemented
-    // implementation project(':feature:home')
-    // implementation project(':feature:cafes')
-    // implementation project(':feature:rentals')
-    // implementation project(':feature:jobs')
-    // implementation project(':feature:services')
-    // implementation project(':feature:events')
-    // implementation project(':feature:profile')
-    // implementation project(':feature:search')
-    // implementation project(':feature:favorites')
-    // implementation project(':feature:messaging')
-
+    // Core modules
+    implementation(project(":core:ui"))
+    implementation(project(":core:common"))
+    implementation(project(":core:network"))
+    implementation(project(":core:database"))
+    
     // Android Core
-    implementation 'androidx.core:core-ktx:1.12.0'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
-    implementation 'androidx.activity:activity-compose:1.8.2'
-
-    // Compose
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
-    implementation 'androidx.compose.material3:material3:1.1.2'
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.core.splashscreen)
 
     // Navigation
-    implementation "androidx.navigation:navigation-compose:$navigation_version"
-    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+    implementation(libs.androidx.navigation.compose)
 
-    // Hilt Dependency Injection
-    implementation "com.google.dagger:hilt-android:$hilt_version"
-    kapt "com.google.dagger:hilt-compiler:$hilt_version"
-    implementation 'androidx.hilt:hilt-navigation-compose:1.1.0'
-
-    // Splash Screen
-    implementation 'androidx.core:core-splashscreen:1.0.1'
-
+    // Dependency Injection
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+    
     // Logging
-    implementation 'com.jakewharton.timber:timber:5.0.1'
+    implementation(libs.timber)
 
     // Testing
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
-    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
-    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.androidx.test.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    debugImplementation(libs.bundles.compose.debug)
 }
 
 kapt {
-    correctErrorTypes true
+    correctErrorTypes = true
 }

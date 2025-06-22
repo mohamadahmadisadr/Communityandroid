@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.community.android.app-merged_res-71:/xml_backup_rules.xml.flat",
+        "source": "com.community.android.app-main-73:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.community.android.app-merged_res-71:/xml_data_extraction_rules.xml.flat",
+        "source": "com.community.android.app-main-73:/xml/data_extraction_rules.xml"
+    }
+]

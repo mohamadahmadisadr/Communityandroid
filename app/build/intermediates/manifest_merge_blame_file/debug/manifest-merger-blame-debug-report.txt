@@ -1,0 +1,225 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.community.android"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Network permissions -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:6:5-67
+12-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:7:5-79
+13-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:7:22-76
+14
+15    <!-- Location permissions -->
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:10:5-79
+16-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:10:22-76
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:11:5-81
+17-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:11:22-78
+18
+19    <!-- Storage permissions for image handling -->
+20    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+20-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:14:5-80
+20-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:14:22-77
+21    <uses-permission
+21-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:15:5-16:38
+22        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+22-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:15:22-78
+23        android:maxSdkVersion="28" />
+23-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:16:9-35
+24
+25    <!-- Camera permission for profile pictures -->
+26    <uses-permission android:name="android.permission.CAMERA" />
+26-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:19:5-65
+26-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:19:22-62
+27
+28    <!-- Notification permissions -->
+29    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+29-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:22:5-77
+29-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:22:22-74
+30
+31    <permission
+31-->[androidx.core:core:1.12.0] /home/mohamad/.gradle/caches/transforms-3/82f13e578ce9ac533382b63acb4993b0/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+32        android:name="com.community.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32-->[androidx.core:core:1.12.0] /home/mohamad/.gradle/caches/transforms-3/82f13e578ce9ac533382b63acb4993b0/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+33        android:protectionLevel="signature" />
+33-->[androidx.core:core:1.12.0] /home/mohamad/.gradle/caches/transforms-3/82f13e578ce9ac533382b63acb4993b0/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+34
+35    <uses-permission android:name="com.community.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+35-->[androidx.core:core:1.12.0] /home/mohamad/.gradle/caches/transforms-3/82f13e578ce9ac533382b63acb4993b0/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.12.0] /home/mohamad/.gradle/caches/transforms-3/82f13e578ce9ac533382b63acb4993b0/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+36
+37    <application
+37-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:24:5-60:19
+38        android:name="com.community.android.CommunityApplication"
+38-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:25:9-45
+39        android:allowBackup="true"
+39-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:26:9-35
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.12.0] /home/mohamad/.gradle/caches/transforms-3/82f13e578ce9ac533382b63acb4993b0/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+41        android:dataExtractionRules="@xml/data_extraction_rules"
+41-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:27:9-65
+42        android:debuggable="true"
+43        android:extractNativeLibs="false"
+44        android:fullBackupContent="@xml/backup_rules"
+44-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:28:9-54
+45        android:icon="@mipmap/ic_launcher"
+45-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:29:9-43
+46        android:label="@string/app_name"
+46-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:30:9-41
+47        android:roundIcon="@mipmap/ic_launcher_round"
+47-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:31:9-54
+48        android:supportsRtl="true"
+48-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:32:9-35
+49        android:theme="@style/Theme.CommunityAndroid"
+49-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:33:9-54
+50        android:usesCleartextTraffic="true" >
+50-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:34:9-44
+51        <activity
+51-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:37:9-45:20
+52            android:name="com.community.android.MainActivity"
+52-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:38:13-41
+53            android:exported="true"
+53-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:39:13-36
+54            android:theme="@style/Theme.CommunityAndroid.Splash" >
+54-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:40:13-65
+55            <intent-filter>
+55-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:41:13-44:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:42:17-69
+56-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:42:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:43:17-77
+58-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:43:27-74
+59            </intent-filter>
+60        </activity>
+61
+62        <!-- Deep link handling for various sections -->
+63        <activity
+63-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:48:9-58:20
+64            android:name="com.community.android.DeepLinkActivity"
+64-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:49:13-45
+65            android:exported="true" >
+65-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:50:13-36
+66            <intent-filter android:autoVerify="true" >
+66-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:51:13-57:29
+66-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:51:28-53
+67                <action android:name="android.intent.action.VIEW" />
+67-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:52:17-69
+67-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:52:25-66
+68
+69                <category android:name="android.intent.category.DEFAULT" />
+69-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:53:17-76
+69-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:53:27-73
+70                <category android:name="android.intent.category.BROWSABLE" />
+70-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:54:17-78
+70-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:54:27-75
+71
+72                <data
+72-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:55:17-56:52
+73                    android:host="community.app"
+73-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:56:21-49
+74                    android:scheme="https" />
+74-->/home/mohamad/AndroidStudioProjects/Communityandroid/app/src/main/AndroidManifest.xml:55:23-45
+75            </intent-filter>
+76        </activity>
+77
+78        <service
+78-->[androidx.room:room-runtime:2.6.1] /home/mohamad/.gradle/caches/transforms-3/d4800dd7382285521661cd6764922a5f/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+79            android:name="androidx.room.MultiInstanceInvalidationService"
+79-->[androidx.room:room-runtime:2.6.1] /home/mohamad/.gradle/caches/transforms-3/d4800dd7382285521661cd6764922a5f/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+80            android:directBootAware="true"
+80-->[androidx.room:room-runtime:2.6.1] /home/mohamad/.gradle/caches/transforms-3/d4800dd7382285521661cd6764922a5f/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+81            android:exported="false" />
+81-->[androidx.room:room-runtime:2.6.1] /home/mohamad/.gradle/caches/transforms-3/d4800dd7382285521661cd6764922a5f/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+82
+83        <activity
+83-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/mohamad/.gradle/caches/transforms-3/203e0bc520a65b62ed63f8c03683efa6/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+84            android:name="androidx.compose.ui.tooling.PreviewActivity"
+84-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/mohamad/.gradle/caches/transforms-3/203e0bc520a65b62ed63f8c03683efa6/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+85            android:exported="true" />
+85-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/mohamad/.gradle/caches/transforms-3/203e0bc520a65b62ed63f8c03683efa6/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+86
+87        <provider
+87-->[androidx.emoji2:emoji2:1.3.0] /home/mohamad/.gradle/caches/transforms-3/a929d89400951bd8055f821f5e503a6c/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+88            android:name="androidx.startup.InitializationProvider"
+88-->[androidx.emoji2:emoji2:1.3.0] /home/mohamad/.gradle/caches/transforms-3/a929d89400951bd8055f821f5e503a6c/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+89            android:authorities="com.community.android.androidx-startup"
+89-->[androidx.emoji2:emoji2:1.3.0] /home/mohamad/.gradle/caches/transforms-3/a929d89400951bd8055f821f5e503a6c/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+90            android:exported="false" >
+90-->[androidx.emoji2:emoji2:1.3.0] /home/mohamad/.gradle/caches/transforms-3/a929d89400951bd8055f821f5e503a6c/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+91            <meta-data
+91-->[androidx.emoji2:emoji2:1.3.0] /home/mohamad/.gradle/caches/transforms-3/a929d89400951bd8055f821f5e503a6c/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+92                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+92-->[androidx.emoji2:emoji2:1.3.0] /home/mohamad/.gradle/caches/transforms-3/a929d89400951bd8055f821f5e503a6c/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+93                android:value="androidx.startup" />
+93-->[androidx.emoji2:emoji2:1.3.0] /home/mohamad/.gradle/caches/transforms-3/a929d89400951bd8055f821f5e503a6c/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+94            <meta-data
+94-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/mohamad/.gradle/caches/transforms-3/93ecdd36a5c8869dcba86f8505854edb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+95                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+95-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/mohamad/.gradle/caches/transforms-3/93ecdd36a5c8869dcba86f8505854edb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+96                android:value="androidx.startup" />
+96-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/mohamad/.gradle/caches/transforms-3/93ecdd36a5c8869dcba86f8505854edb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+97            <meta-data
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+98                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+99                android:value="androidx.startup" />
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+100        </provider>
+101
+102        <activity
+102-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/mohamad/.gradle/caches/transforms-3/2cd4afa209e4544b5a5382663c1ad73d/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:23:9-25:39
+103            android:name="androidx.activity.ComponentActivity"
+103-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/mohamad/.gradle/caches/transforms-3/2cd4afa209e4544b5a5382663c1ad73d/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:24:13-63
+104            android:exported="true" />
+104-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/mohamad/.gradle/caches/transforms-3/2cd4afa209e4544b5a5382663c1ad73d/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:25:13-36
+105
+106        <receiver
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+107            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+108            android:directBootAware="false"
+108-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+109            android:enabled="true"
+109-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+110            android:exported="true"
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+111            android:permission="android.permission.DUMP" >
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+112            <intent-filter>
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+113                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+113-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+113-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+114            </intent-filter>
+115            <intent-filter>
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+116                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+116-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+116-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+117            </intent-filter>
+118            <intent-filter>
+118-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+119                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+120            </intent-filter>
+121            <intent-filter>
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+122                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/mohamad/.gradle/caches/transforms-3/586d02da8df2bb22cf4e27df5e6fc203/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+123            </intent-filter>
+124        </receiver>
+125    </application>
+126
+127</manifest>

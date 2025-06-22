@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/mohamad/AndroidStudioProjects/Communityandroid/feature/auth/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3881980993515260124.xml:2:13-83
+INJECTED from /home/mohamad/AndroidStudioProjects/Communityandroid/feature/auth/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3881980993515260124.xml:2:13-83
+	package
+		INJECTED from /home/mohamad/AndroidStudioProjects/Communityandroid/feature/auth/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3881980993515260124.xml
+	xmlns:android
+		ADDED from /home/mohamad/AndroidStudioProjects/Communityandroid/feature/auth/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3881980993515260124.xml:2:23-81
+uses-sdk
+INJECTED from /home/mohamad/AndroidStudioProjects/Communityandroid/feature/auth/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3881980993515260124.xml reason: use-sdk injection requested
+INJECTED from /home/mohamad/AndroidStudioProjects/Communityandroid/feature/auth/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3881980993515260124.xml
+INJECTED from /home/mohamad/AndroidStudioProjects/Communityandroid/feature/auth/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3881980993515260124.xml
+	android:targetSdkVersion
+		INJECTED from /home/mohamad/AndroidStudioProjects/Communityandroid/feature/auth/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3881980993515260124.xml
+	android:minSdkVersion
+		INJECTED from /home/mohamad/AndroidStudioProjects/Communityandroid/feature/auth/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3881980993515260124.xml
