@@ -124,5 +124,6 @@ string welcome_subtitle
 string welcome_title
 string write_review
 style Theme.CommunityAndroid
+style Theme.CommunityAndroid.Splash
 xml backup_rules
 xml data_extraction_rules

@@ -5,6 +5,8 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.community.core.common.result.Result
+import com.community.core.common.result.onError
+import com.community.core.common.result.onSuccess
 import com.community.domain.restaurants.model.Restaurant
 import com.community.domain.restaurants.repository.RestaurantRepository
 import dagger.hilt.android.lifecycle.HiltViewModel

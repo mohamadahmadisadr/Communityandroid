@@ -15,7 +15,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.paging.compose.collectAsLazyPagingItems
-import androidx.paging.compose.items
+import androidx.paging.compose.itemContentType
+import androidx.paging.compose.itemKey
 import com.community.feature.restaurants.presentation.components.RestaurantCard
 import com.community.feature.restaurants.presentation.components.RestaurantSearchBar
 import com.community.feature.restaurants.presentation.components.FilterChip
@@ -152,7 +153,12 @@ fun RestaurantsScreen(
         LazyColumn(
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            items(restaurants) { restaurant ->
+            items(
+                count = restaurants.itemCount,
+                key = restaurants.itemKey { it.id },
+                contentType = restaurants.itemContentType { "restaurant" }
+            ) { index ->
+                val restaurant = restaurants[index]
                 restaurant?.let {
                     RestaurantCard(
                         restaurant = it,

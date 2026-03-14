@@ -2,7 +2,8 @@ package com.community.feature.auth.presentation.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.community.core.common.result.Result
+import com.community.core.common.result.onError
+import com.community.core.common.result.onSuccess
 import com.community.domain.auth.model.LoginCredentials
 import com.community.domain.auth.repository.AuthRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -49,11 +50,11 @@ class LoginViewModel @Inject constructor(
 
     fun login() {
         val currentState = _uiState.value
-        
+
         // Validate input
         val emailError = validateEmail(currentState.email)
         val passwordError = validatePassword(currentState.password)
-        
+
         if (emailError != null || passwordError != null) {
             _uiState.value = currentState.copy(
                 emailError = emailError,
@@ -65,12 +66,12 @@ class LoginViewModel @Inject constructor(
         // Proceed with login
         viewModelScope.launch {
             _uiState.value = currentState.copy(isLoading = true, error = null)
-            
+
             val credentials = LoginCredentials(
                 email = currentState.email,
                 password = currentState.password
             )
-            
+
             authRepository.login(credentials)
                 .onSuccess { user ->
                     _uiState.value = _uiState.value.copy(

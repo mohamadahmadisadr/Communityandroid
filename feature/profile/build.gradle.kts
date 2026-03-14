@@ -45,10 +45,9 @@ android {
 
 dependencies {
 
-
     // Compose BOM - this manages all compose versions
     implementation(platform(libs.androidx.compose.bom))
-    // implementation(libs.bundles.compose)
+    implementation(libs.bundles.compose)
 
     // Core modules
     implementation(project(":core:common"))
@@ -60,8 +59,7 @@ dependencies {
     // Android Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.bundles.lifecycle)
-
-
+    implementation(libs.androidx.activity.compose)
 
     // Navigation
     implementation(libs.androidx.navigation.compose)
@@ -76,11 +74,18 @@ dependencies {
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
+
+    // Logging
+    implementation(libs.timber)
     
     // Testing
     testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    debugImplementation(libs.bundles.compose.debug)
 }
 
 kapt {

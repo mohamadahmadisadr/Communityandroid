@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
+import com.community.domain.auth.model.User
 
 /**
  * Profile screen
@@ -32,11 +33,11 @@ fun ProfileScreen(
     viewModel: ProfileViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val currentUser by viewModel.currentUser.collectAsState()
+    val userValue by viewModel.currentUser.collectAsState()
 
     // Handle authentication state
     LaunchedEffect(uiState.isLoggedIn) {
-        if (!uiState.isLoggedIn && currentUser == null) {
+        if (!uiState.isLoggedIn && userValue == null) {
             onLoginRequired()
         }
     }
@@ -57,7 +58,7 @@ fun ProfileScreen(
         
         Spacer(modifier = Modifier.height(24.dp))
 
-        if (currentUser != null) {
+        userValue?.let { user ->
             // User Profile Section
             Card(
                 modifier = Modifier.fillMaxWidth(),
@@ -68,9 +69,9 @@ fun ProfileScreen(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     // Profile Picture
-                    if (currentUser.avatarUrl != null) {
+                    if (user.avatarUrl != null) {
                         AsyncImage(
-                            model = currentUser.avatarUrl,
+                            model = user.avatarUrl,
                             contentDescription = "Profile picture",
                             modifier = Modifier
                                 .size(80.dp)
@@ -87,7 +88,7 @@ fun ProfileScreen(
                                 contentAlignment = Alignment.Center
                             ) {
                                 Text(
-                                    text = currentUser.getInitials(),
+                                    text = user.getInitials(),
                                     style = MaterialTheme.typography.headlineMedium,
                                     fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.onPrimaryContainer
@@ -100,20 +101,20 @@ fun ProfileScreen(
                     
                     // User Name
                     Text(
-                        text = currentUser.getDisplayName(),
+                        text = user.getDisplayName(),
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.SemiBold
                     )
                     
                     // Email
                     Text(
-                        text = currentUser.email,
+                        text = user.email,
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     
                     // Location
-                    currentUser.location?.let { location ->
+                    user.location?.let { location ->
                         Spacer(modifier = Modifier.height(4.dp))
                         Row(
                             verticalAlignment = Alignment.CenterVertically
@@ -239,7 +240,7 @@ fun ProfileScreen(
                     Text("Logout")
                 }
             }
-        } else {
+        } ?: run {
             // Not logged in state
             Card(
                 modifier = Modifier.fillMaxWidth()

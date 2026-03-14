@@ -51,8 +51,6 @@ android {
 }
 
 dependencies {
-
-
     // Compose BOM - this manages all compose versions
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.compose)
@@ -68,8 +66,6 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
-
-
     
     // Navigation
     implementation(libs.androidx.navigation.compose)
@@ -78,7 +74,8 @@ dependencies {
     implementation(libs.bundles.lifecycle)
 
     // Paging 3
-    implementation(libs.androidx.paging.runtime)
+    implementation(libs.androidx.paging.runtime.ktx)
+    implementation(libs.androidx.paging.compose)
 
     // Dependency Injection
     implementation(libs.hilt.android)

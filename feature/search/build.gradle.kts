@@ -47,7 +47,7 @@ dependencies {
 
     // Compose BOM - this manages all compose versions
     implementation(platform(libs.androidx.compose.bom))
-    // implementation(libs.bundles.compose)
+    implementation(libs.bundles.compose)
 
     // Core modules
     implementation(project(":core:common"))
@@ -72,6 +72,9 @@ dependencies {
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
+
+    // Logging
+    implementation(libs.timber)
     
     // Testing
     testImplementation(libs.junit)

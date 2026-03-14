@@ -61,7 +61,7 @@ dependencies {
     // Compose BOM - this manages all compose versions
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.compose)
-    
+
     // Feature modules
     implementation(project(":feature:auth"))
     implementation(project(":feature:restaurants"))
@@ -77,7 +77,7 @@ dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:network"))
     implementation(project(":core:database"))
-    
+
     // Android Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -91,7 +91,10 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
-    
+
+    // Material Components
+    implementation(libs.google.material)
+
     // Logging
     implementation(libs.timber)
 

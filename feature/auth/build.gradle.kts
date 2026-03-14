@@ -12,16 +12,26 @@ android {
 
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
-        targetSdk = libs.versions.targetSdk.get().toInt()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
+    testOptions {
+        targetSdk = libs.versions.targetSdk.get().toInt()
+    }
+
+    lint {
+        targetSdk = libs.versions.targetSdk.get().toInt()
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
@@ -52,13 +62,14 @@ dependencies {
     // Core modules
     implementation(project(":core:common"))
     implementation(project(":core:ui"))
-    
+
+    // Domain modules
+    implementation(project(":domain:auth"))
+
     // Android Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.bundles.lifecycle)
     implementation(libs.androidx.activity.compose)
-
-    
 
     // Navigation
     implementation(libs.androidx.navigation.compose)
@@ -76,7 +87,7 @@ dependencies {
 
     // Logging
     implementation(libs.timber)
-    
+
     // Testing
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
